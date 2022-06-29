@@ -1,0 +1,76 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "firstName": "kirui",
+      "lastName": "k",
+      "emailAdress": "vl@gmail.com",
+      "password": "Sysre123",
+      "country": "kenya",
+      "id": 1
+    },
+    {
+      "firstName": "dennis",
+      "lastName": "kipyegon",
+      "emailAdress": "denosael@gmail.com",
+      "password": "Sysre123",
+      "country": "kenya",
+      "id": 2
+    },
+    {
+      "firstName": "vincent",
+      "lastName": "koech",
+      "emailAdress": "vinnyjr@gmail.com",
+      "password": "12345",
+      "country": "canada",
+      "id": 3
+    },
+    {
+      "firstName": "edwin",
+      "lastName": "rono",
+      "emailAdress": "edwinkrono@gmail.com",
+      "password": "654321",
+      "country": "canada",
+      "id": 4
+    },
+    {
+      "firstName": "eo7dtcg",
+      "lastName": "iyug",
+      "emailAdress": "vl@gmail.com",
+      "password": "Sysre123",
+      "country": "canada",
+      "id": 5
+    },
+    {
+      "firstName": "",
+      "lastName": "",
+      "emailAdress": "vl@gmail.com",
+      "password": "Sysre123",
+      "country": "",
+      "id": 6
+    },
+    {
+      "firstName": "",
+      "lastName": "",
+      "emailAdress": "vl@gmail.com",
+      "password": "Sysre123",
+      "country": "",
+      "id": 7
+    },
+    {
+      "firstName": "dennis",
+      "lastName": "langat",
+      "emailAdress": "dennislangat2gmail.com",
+      "password": "12345",
+      "country": "canada",
+      "id": 8
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
