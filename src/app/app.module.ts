@@ -7,7 +7,8 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
-import {HttpClientModule} from '@angular/common/http'
+import {HttpClientModule} from '@angular/common/http';
+import { SharedService } from './shared.service';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,7 @@ import {HttpClientModule} from '@angular/common/http'
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [SharedService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { SharedService } from '../shared.service';
 
 @Component({
   selector: 'app-register',
@@ -13,44 +14,36 @@ export class RegisterComponent implements OnInit {
   public registerForm! : FormGroup;
    
 
-  constructor(private formBuilder: FormBuilder, private http:HttpClient,private router:Router) { }
+  constructor(private formBuilder: FormBuilder, 
+    private http:HttpClient,
+    private router:Router,
+    private sharedService: SharedService) { }
   
 
 
   ngOnInit(): void {
     this.registerForm= this.formBuilder.group({
       firstName: [''],
-      lastName:[''],
-      emailAdress : [''],
+      middleName:[''],
+      lastName : [''],
+      emailAddress: [''],
+      phoneNo:[],
+      dateOfBirth:[],
       password: [''],
-      country: [''],
     });
   }
-  // onSubmit(){
-  //   this.http.post<any> ("http://localhost:3000/comments", this.registerForm.value).subscribe(
-  //     next:data=>{
-  //       alert("Registration Successiful");
-  //     console.log(this.registerForm)
-  //     this.registerForm.reset();
-  //     this.router.navigate(['login']);
-  //   },
-  //   error:error=>{
-  //     console.log(this.registerForm);
-  //     alert("Connection Error..!")
-  //   }
-  // })
-  // }
   onSubmit(){
-    this.http.post<any>("http://localhost:3000/posts",this.registerForm.value).subscribe(
-      (res:any)=>{
-        alert("Registration Successiful");
+    let formValues=this.registerForm.value;
+    this.sharedService.Register(formValues).subscribe(
+      res=>{alert("Registration Successiful");
         this.registerForm.reset();
         this.router.navigate(['login']);
-      },
-      error=>{
-             alert("Connection Error..!");
-          }
-    )}
+      } ,err=>{
+        alert ("Something went wrong!!");
+      }
+    )
+ 
+  }
 }
 
 
