@@ -24,12 +24,12 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void {
     this.registerForm= this.formBuilder.group({
       firstName: [''],
-      middleName:[''],
-      lastName : [''],
+      middleName: [''],
+      lastName: [''],
       emailAddress: [''],
-      phoneNo:[],
-      dateOfBirth:[],
-      password: [''],
+      phoneNo: [''],
+      dateOfBirth: [''],
+      password: ['']
     });
   }
   onSubmit(){

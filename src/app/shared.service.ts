@@ -8,15 +8,7 @@ import { RegistrationUser } from './register/Registration';
 })
 export class SharedService {
 
-  // httpOptions={
-  //   headers:new HttpHeaders({
-  //     'Access-Control-Allow-Origin':'*',
-  //     'Authorization': 'authkey',
-  //     'userid': '1'
-  //   })
-  // };
   
-
   constructor(private http:HttpClient,private messageService: MessageService) { }
   private log(message:string){
     this.messageService.add(`SharedService: ${message}`);
@@ -43,6 +35,4 @@ export class SharedService {
     //   catchError(this.handleError('error', []))
     // );
   }
-
-  
 }

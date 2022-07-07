@@ -9,6 +9,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import {HttpClientModule} from '@angular/common/http';
 import { SharedService } from './shared.service';
+import { CorsService } from './cors.service';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { SharedService } from './shared.service';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [SharedService],
+  providers: [SharedService,CorsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
